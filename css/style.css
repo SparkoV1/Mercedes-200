@@ -7,7 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 50px #080808 !important;
+  -webkit-box-shadow: inset 0px 0px 0px 50px #080808 !important;
   /* Цвет фона */
   -webkit-text-fill-color: white !important;
   /* цвет текста */
@@ -444,8 +444,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.menu-list__item {
+  margin-right: 50px;
 }
 
 .menu-list__link {
@@ -654,6 +658,7 @@ a {
   width: 100%;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In .SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' fill='%23ffffff' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 240.835 240.835' style='enable-background:new 0 0 240.835 240.835;' xml:space='preserve'%3E%3Cg%3E%3Cpath id='Expand_Less' d='M129.007,57.819c-4.68-4.68-12.499-4.68-17.191,0L3.555,165.803c-4.74,4.74-4.74,12.427,0,17.155 c4.74,4.74,12.439,4.74,17.179,0l99.683-99.406l99.671,99.418c4.752,4.74,12.439,4.74,17.191,0c4.74-4.74,4.74-12.427,0-17.155 L129.007,57.819z'/%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: right;
   outline: none;
   background-size: 30px;
@@ -971,6 +976,9 @@ a {
   .header__logo {
     margin-right: 35px;
   }
+  .menu-list__item {
+    margin-right: 20px;
+  }
   .menu-list__link {
     font-size: 16px;
   }
@@ -1009,37 +1017,29 @@ a {
   }
   .menu {
     position: absolute;
-    left: 0;
-    right: 0;
+    right: 30px;
     top: -300px;
     background-color: #000;
     z-index: 666;
-    -webkit-transition: top  0.5s,bottom 0.5s;
-    transition: top 0.5s, bottom 0.5s;
-    display: flex;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-    align-items: center;
-
+    padding: 50px 20px 20px;
+    border-radius: 15px;
+    -webkit-transition: top 0.5s;
+    transition: top 0.5s;
   }
   .menu-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 40px;
   }
-  .menu-list__link{
-    font-size: 20px;
+  .menu-list__item {
+    margin-bottom: 22px;
   }
   .menu-active {
-    bottom: 0;
-    overflow: hidden;
     top: 0;
   }
   .humburger-menu {
     display: block;
-    z-index: 1000;
   }
   .main__title {
     font-size: 110px;
